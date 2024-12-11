@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Peer Review System</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/}">Peer Review</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" th:href="@{/fitness}">Peer Review</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Explore our Peer Review Management System</h1>
+        <div class="row">
+            <!-- Yoga Program -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/quiz.jpg" class="card-img-top" alt="Yoga for Beginners">
+                    <div class="card-body">
+                        <h5 class="card-title">Create a Quiz</h5>
+                        <p class="card-text">You can Create a quiz</p>
+                        <a th:href="@{/fitness/yoga}" class="btn btn-primary">Enter</a>
+                    </div>
+                </div>
+            </div>
+            <!-- HIIT Workouts -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/takequiz.jpg" class="card-img-top" alt="HIIT Workouts">
+                    <div class="card-body">
+                        <h5 class="card-title">Take a Quiz</h5>
+                        <p class="card-text">You can take the quizes here ..</p>
+                        <a th:href="@{/fitness/hiit}" class="btn btn-primary">Enter</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Strength Training -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/reviewquiz.jpg" class="card-img-top" alt="Strength Training">
+                    <div class="card-body">
+                        <h5 class="card-title">Review</h5>
+                        <p class="card-text">You can review the Applicartion here .</p>
+                        <a th:href="@{/fitness/strength}" class="btn btn-primary">Enter</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <!-- Cardio -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/c.jpg" class="card-img-top" alt="Cardio Workouts">
+                    <div class="card-body">
+                        <h5 class="card-title">C Course</h5>
+                        <p class="card-text">Improve your programmig language C for free.</p>
+                        <a th:href="@{/fitness/cardio}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Pilates -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/java.png" class="card-img-top" alt="Pilates Classes">
+                    <div class="card-body">
+                        <h5 class="card-title">Java Course</h5>
+                        <p class="card-text">Improve your programmig language Java for free..</p>
+                        <a th:href="@{/fitness/pilates}" class="btn btn-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Martial Arts -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="/images/python.jpg" class="card-img-top" alt="Martial Arts">
+                    <div class="card-body">
+                        <h5 class="card-title">Python Course</h5>
+						                        <p class="card-text">Improve your programmig language Python for free..</p>
+						                        <a th:href="@{/fitness/martialarts}" class="btn btn-primary">Learn More</a>
+						                    </div>
+						                </div>
+						            </div>
+						        </div>
+						    </div>
+
+						    <!-- Footer -->
+						    <footer class="bg-primary text-white text-center mt-5 py-3">
+						        <p>&copy; 2024 Peer Review Platform. All rights reserved.</p>
+						    </footer>
+
+						    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+						    <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+						</body>
+						</html>
+
+       

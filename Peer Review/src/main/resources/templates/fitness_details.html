@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Details</title>
+    <link rel="stylesheet" type="text/css" href="/webjars/bootstrap/css/bootstrap.min.css" />
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Program Details</h1>
+
+       
+
+        <!-- Yoga Program -->
+        <div th:if="${program == 'yoga'}">
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    <meta charset="UTF-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Create Quiz</title>
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			</head>
+			<body>
+			    <div class="container mt-5">
+			        <h2>Create a Quiz</h2>
+			        <form action="/submit-quiz" method="post">
+			            <!-- Question 1 -->
+			            <div class="form-group">
+			                <label for="question1">Question 1</label>
+			                <input type="text" class="form-control" id="question1" name="question1" placeholder="Enter the question" required>
+			            </div>
+
+			            <!-- Answer Options for Question 1 -->
+			            <div class="form-group">
+			                <label>Answers</label>
+			                <input type="text" class="form-control" name="question1_answer1" placeholder="Answer 1" required>
+			                <input type="text" class="form-control mt-2" name="question1_answer2" placeholder="Answer 2" required>
+			                <input type="text" class="form-control mt-2" name="question1_answer3" placeholder="Answer 3" required>
+			                <input type="text" class="form-control mt-2" name="question1_answer4" placeholder="Answer 4" required>
+			            </div>
+
+			            <!-- Correct Answer for Question 1 -->
+			            <div class="form-group">
+			                <label for="correctAnswer1">Correct Answer</label>
+			                <select class="form-control" id="correctAnswer1" name="question1_correctAnswer" required>
+			                    <option value="1">Answer 1</option>
+			                    <option value="2">Answer 2</option>
+			                    <option value="3">Answer 3</option>
+			                    <option value="4">Answer 4</option>
+			                </select>
+			            </div>
+
+			            <hr>
+
+			            <!-- Question 2 -->
+			            <div class="form-group">
+			                <label for="question2">Question 2</label>
+			                <input type="text" class="form-control" id="question2" name="question2" placeholder="Enter the question" required>
+			            </div>
+
+			            <!-- Answer Options for Question 2 -->
+			            <div class="form-group">
+			                <label>Answers</label>
+			                <input type="text" class="form-control" name="question2_answer1" placeholder="Answer 1" required>
+			                <input type="text" class="form-control mt-2" name="question2_answer2" placeholder="Answer 2" required>
+			                <input type="text" class="form-control mt-2" name="question2_answer3" placeholder="Answer 3" required>
+			                <input type="text" class="form-control mt-2" name="question2_answer4" placeholder="Answer 4" required>
+			            </div>
+
+			            <!-- Correct Answer for Question 2 -->
+			            <div class="form-group">
+			                <label for="correctAnswer2">Correct Answer</label>
+			                <select class="form-control" id="correctAnswer2" name="question2_correctAnswer" required>
+			                    <option value="1">Answer 1</option>
+			                    <option value="2">Answer 2</option>
+			                    <option value="3">Answer 3</option>
+			                    <option value="4">Answer 4</option>
+			                </select>
+			            </div>
+
+			            <hr>
+
+			            <!-- Submit Button -->
+			            <button type="submit" class="btn btn-primary">Submit Quiz</button>
+			        </form>
+			    </div>
+
+			    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			</body>
+			</html>
+
+            
+           
+        </div>
+
+        <!-- Cardio Program -->
+        <div th:if="${program == 'cardio'}">
+            <p>The C programming language is a powerful and efficient language, commonly used for system programming, application development, and embedded systems.</p>
+            <img src="/images/c.jpg" alt="Cardio Workout" class="img-fluid mb-4" />
+
+			<h3>Steps to Learn C Programming</h3>
+			<ol>
+			    <li>Start with understanding the basic structure of a C program.</li>
+			    <li>Learn about variables, data types, and operators in C.</li>
+			    <li>Practice writing simple programs to understand control flow (if-else, loops).</li>
+			    <li>Explore functions, arrays, and pointers to build more complex programs.</li>
+			    <li>Master advanced topics like structures, file handling, and dynamic memory allocation.</li>
+			    <li>Keep practicing through projects to improve problem-solving skills.</li>
+			</ol>
+
+			<h3>Key Concepts in C Programming</h3>
+			<ul>
+			    <li>Variables: Containers for storing data of different types (int, float, char).</li>
+			    <li>Functions: Reusable blocks of code that perform specific tasks in a program.</li>
+			    <li>Pointers: Variables that store memory addresses of other variables, allowing efficient memory management.</li>
+			    <li>Arrays: Collections of similar data types stored in contiguous memory locations.</li>
+			    <li>Control Flow: Conditional statements and loops that control the execution of code.</li>
+			    <li>Structures: Custom data types that group related variables together.</li>
+			    <li>File Handling: Operations like reading and writing data to files.</li>
+			</ul>
+			<h3>Learn More in the below links...</h3>
+			<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
+	</div>
+        <!-- Strength Training Program -->
+        <div th:if="${program == 'strength'}">
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    <meta charset="UTF-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Review Form</title>
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			    <style>
+			        /* Styling for the star rating */
+			        .star-rating input[type="radio"] {
+			            display: none;
+			        }
+
+			        .star-rating label {
+			            font-size: 2rem;
+			            color: #ddd;
+			            cursor: pointer;
+			        }
+
+			        .star-rating input[type="radio"]:checked ~ label {
+			            color: #f39c12;
+			        }
+
+			        .star-rating label:hover, .star-rating label:hover ~ label {
+			            color: #f39c12;
+			        }
+			    </style>
+			</head>
+			<body>
+			    <div class="container mt-5">
+			        <h2>Submit Your Review</h2>
+			        <form action="/submit-review" method="post">
+			            <!-- Name Input -->
+			            <div class="form-group">
+			                <label for="name">Your Name</label>
+			                <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+			            </div>
+
+			            <!-- Email Input -->
+			            <div class="form-group">
+			                <label for="email">Your Email</label>
+			                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+			            </div>
+
+			            <!-- Rating Section (Stars) -->
+			            <div class="form-group">
+			                <label for="rating">Rating</label>
+			                <div class="star-rating">
+			                    <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+			                    <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+			                    <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+			                    <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+			                    <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+			                </div>
+			            </div>
+
+			            <!-- Comments Section -->
+			            <div class="form-group">
+			                <label for="comments">Your Comments</label>
+			                <textarea class="form-control" id="comments" name="comments" rows="4" placeholder="Write your review here..." required></textarea>
+			            </div>
+
+			            <!-- Submit Button -->
+			            <button type="submit" class="btn btn-primary">Submit Review</button>
+			        </form>
+			    </div>
+
+			    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			</body>
+			</html>
+
+
+           
+        </div>
+
+        <!-- Pilates Program -->
+        <div th:if="${program == 'pilates'}">
+			<p>Java is a versatile, object-oriented programming language used in web development, mobile apps, and enterprise solutions.</p>
+			<img src="/images/java.png" alt="Java Programming" class="img-fluid mb-4" />
+
+			<h3>Steps to Learn Java</h3>
+			<ol>
+			    <li>Start with understanding the basic syntax and structure of Java.</li>
+			    <li>Learn about variables, data types, and operators used in Java.</li>
+			    <li>Practice writing simple Java programs using control structures like if-else, loops, and switches.</li>
+			    <li>Explore object-oriented programming (OOP) concepts such as classes, objects, inheritance, and polymorphism.</li>
+			    <li>Understand exception handling, file I/O, and collections in Java.</li>
+			    <li>Build projects like console-based applications or web applications to gain hands-on experience.</li>
+			</ol>
+
+			<h3>Key Concepts in Java</h3>
+			<ul>
+			    <li>Variables: Store data of different types like integers, strings, and booleans in Java.</li>
+			    <li>Data Types: Java supports primitive types (int, double, boolean) and reference types (arrays, strings, objects).</li>
+			    <li>Control Flow: Conditional statements (if-else, switch) and loops (for, while, do-while) to control program execution.</li>
+			    <li>Object-Oriented Programming (OOP): Concepts like classes, objects, inheritance, polymorphism, and encapsulation.</li>
+			    <li>Exception Handling: Using try-catch blocks to handle errors and exceptions in Java programs.</li>
+			    <li>Collections: Frameworks such as lists, sets, maps, and queues for managing groups of objects.</li>
+			    <li>Java Libraries and Frameworks: Explore libraries and frameworks like JavaFX, Spring, and Hibernate for building GUI applications, web services, and database connectivity.</li>
+			</ul>
+			<h3>Learn More in the below links...</h3>
+						<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
+        </div>
+
+        <!-- Martial Arts Program -->
+        <div th:if="${program == 'martialarts'}">
+			<p>Python is a versatile and beginner-friendly programming language used for web development, data analysis, automation, and more.</p>
+			<img src="/images/python.jpg" alt="Python Programming" class="img-fluid mb-4" />
+
+			<h3>Steps to Learn Python</h3>
+			<ol>
+			    <li>Start with understanding the basic syntax and structure of Python.</li>
+			    <li>Learn about variables, data types, and operators in Python.</li>
+			    <li>Practice writing simple programs using control structures like loops and conditionals.</li>
+			    <li>Move on to more complex topics such as functions, lists, and dictionaries.</li>
+			    <li>Explore object-oriented programming (OOP) concepts and libraries in Python.</li>
+			    <li>Work on projects to solidify your knowledge and enhance problem-solving skills.</li>
+			</ol>
+
+			<h3>Key Concepts in Python</h3>
+			<ul>
+			    <li>Variables: Containers for storing data values of different types such as integers, strings, and floats.</li>
+			    <li>Functions: Reusable blocks of code that perform specific tasks when called.</li>
+			    <li>Control Flow: Conditional statements (if-else) and loops (for, while) to control program execution.</li>
+			    <li>Lists: Ordered collections of items, useful for storing multiple elements of the same type.</li>
+			    <li>Dictionaries: Unordered collections of key-value pairs for efficient data retrieval.</li>
+			    <li>Object-Oriented Programming (OOP): Programming paradigm that uses classes and objects to organize code.</li>
+			    <li>Libraries: Pre-written Python code for various tasks like data analysis (Pandas), web development (Flask, Django), and more.</li>
+			</ul>
+			<h3>Learn More in the below links...</h3>
+						<a href="https://www.w3schools.com">Visit W3Schools.com!</a>
+
+        </div>
+
+        <!-- HIIT Program -->
+        <div th:if="${program == 'hiit'}">
+			<!DOCTYPE html>
+			<html lang="en">
+			<head>
+			    <meta charset="UTF-8">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			    <title>Take the Quiz</title>
+			    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+			    <style>
+			        .quiz-container {
+			            margin-top: 50px;
+			        }
+
+			        .question {
+			            margin-bottom: 20px;
+			        }
+
+			        .question-title {
+			            font-size: 1.25rem;
+			        }
+
+			        .answer-options {
+			            margin-left: 20px;
+			        }
+
+			        .answer-options label {
+			            font-size: 1rem;
+			            margin-bottom: 10px;
+			            display: block;
+			        }
+
+			        .submit-btn {
+			            margin-top: 20px;
+			        }
+
+			        .result {
+			            margin-top: 30px;
+			            font-size: 1.25rem;
+			            font-weight: bold;
+			        }
+
+			        .correct {
+			            color: green;
+			        }
+
+			        .incorrect {
+			            color: red;
+			        }
+			    </style>
+			</head>
+			<body>
+			    <div class="container quiz-container">
+			        <h2 class="text-center">Take the Quiz</h2>
+			        <form id="quizForm">
+			            <!-- Question 1 -->
+			            <div class="question">
+			                <div class="question-title">
+			                    <strong>1. What is the capital of France?</strong>
+			                </div>
+			                <div class="answer-options">
+			                    <input type="radio" id="q1a1" name="q1" value="A">
+			                    <label for="q1a1">A. Berlin</label>
+			                    
+			                    <input type="radio" id="q1a2" name="q1" value="B">
+			                    <label for="q1a2">B. Paris</label>
+			                    
+			                    <input type="radio" id="q1a3" name="q1" value="C">
+			                    <label for="q1a3">C. Madrid</label>
+			                    
+			                    <input type="radio" id="q1a4" name="q1" value="D">
+			                    <label for="q1a4">D. Rome</label>
+			                </div>
+			            </div>
+
+			            <!-- Question 2 -->
+			            <div class="question">
+			                <div class="question-title">
+			                    <strong>2. Which planet is known as the Red Planet?</strong>
+			                </div>
+			                <div class="answer-options">
+			                    <input type="radio" id="q2a1" name="q2" value="A">
+			                    <label for="q2a1">A. Venus</label>
+			                    
+			                    <input type="radio" id="q2a2" name="q2" value="B">
+			                    <label for="q2a2">B. Mars</label>
+			                    
+			                    <input type="radio" id="q2a3" name="q2" value="C">
+			                    <label for="q2a3">C. Jupiter</label>
+			                    
+			                    <input type="radio" id="q2a4" name="q2" value="D">
+			                    <label for="q2a4">D. Saturn</label>
+			                </div>
+			            </div>
+
+			            <!-- Question 3 -->
+			            <div class="question">
+			                <div class="question-title">
+			                    <strong>3. Who wrote the play "Romeo and Juliet"?</strong>
+			                </div>
+			                <div class="answer-options">
+			                    <input type="radio" id="q3a1" name="q3" value="A">
+			                    <label for="q3a1">A. Charles Dickens</label>
+			                    
+			                    <input type="radio" id="q3a2" name="q3" value="B">
+			                    <label for="q3a2">B. William Shakespeare</label>
+			                    
+			                    <input type="radio" id="q3a3" name="q3" value="C">
+			                    <label for="q3a3">C. Mark Twain</label>
+			                    
+			                    <input type="radio" id="q3a4" name="q3" value="D">
+			                    <label for="q3a4">D. Jane Austen</label>
+			                </div>
+			            </div>
+
+			            <!-- Submit Button -->
+			            <div class="form-group text-center">
+			                <button type="button" class="btn btn-primary submit-btn" onclick="submitQuiz()">Submit Quiz</button>
+			            </div>
+			        </form>
+
+			        <!-- Result Display -->
+			        <div id="result" class="result" style="display: none;">
+			            <p id="score"></p>
+			            <ul id="answers"></ul>
+			        </div>
+			    </div>
+
+			    <script>
+			        // Define correct answers
+			        const correctAnswers = {
+			            q1: 'B', // Paris
+			            q2: 'B', // Mars
+			            q3: 'B'  // William Shakespeare
+			        };
+
+			        // Function to submit the quiz
+			        function submitQuiz() {
+			            let score = 0;
+			            let answersHtml = '';
+
+			            // Check each question's answer
+			            for (let question in correctAnswers) {
+			                let selectedOption = document.querySelector(`input[name="${question}"]:checked`);
+
+			                if (selectedOption) {
+			                    const answer = selectedOption.value;
+			                    const resultClass = (answer === correctAnswers[question]) ? 'correct' : 'incorrect';
+			                    answersHtml += `<li class="${resultClass}">Question: ${document.querySelector(`strong[for="${question}"]`).innerText} - Answer: ${selectedOption.nextElementSibling.innerText}</li>`;
+			                    if (answer === correctAnswers[question]) {
+			                        score++;
+			                    }
+			                }
+			            }
+
+			            // Show the result
+			            document.getElementById('score').innerText = `Your score: ${score} out of 3`;
+			            document.getElementById('answers').innerHTML = answersHtml;
+			            document.getElementById('result').style.display = 'block';
+			        }
+			    </script>
+
+			    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+			    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+			    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+			</body>
+			</html>
+
